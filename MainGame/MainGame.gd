@@ -17,8 +17,7 @@ func _ready():
 	print ("Game Over")
 
 func _process(delta):
-	$HUD/CurrentScore.text = str (10)
-	
+	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

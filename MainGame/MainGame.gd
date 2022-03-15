@@ -15,12 +15,14 @@ func _ready():
 		currentTimer = currentTimer -1
 		print(currentTimer)
 	print ("Game Over")
-
+	GlobalVariables.prescore.push_front (GlobalVariables.scoringInformation["currentScore"])
+	print (GlobalVariables.prescore)
+	get_tree().change_scene("res://endscene.tscn")
+	
 func _process(delta):
 	$HUD/CurrentScore.text = str(GlobalVariables.scoringInformation["currentScore"])
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
 
 
